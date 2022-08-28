@@ -2,7 +2,7 @@
 from collections import namedtuple
 from multiprocessing.dummy import current_process
 from sqlite3 import DatabaseError
-from tkinter.filedialog import test
+#from tkinter.filedialog import test
 from webbrowser import get
 import altair as alt
 import math
