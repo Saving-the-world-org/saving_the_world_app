@@ -27,7 +27,7 @@ st.write("Available Organizations to Donate to")
 for i in org_df.index.drop_duplicates():
     st.subheader(i)
     city = get_city_for_org(i)
-    st.write(type(city))
+
     if isinstance(city, str):
         st.write("City: " + city)
     else:
