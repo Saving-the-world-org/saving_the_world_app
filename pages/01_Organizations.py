@@ -39,7 +39,7 @@ for i in org_df.index.drop_duplicates():
         st.write("Credibility Rating (out of 5): " + cred )
 
     with col2: 
-        i.replace(" ", "")
+        i = i.replace(" ", "")
         url = "https://github.com/Saving-the-world-org/saving_the_world_app/blob/main/images/" + i + ".png"
         st.write(url)
         st.image(url)
