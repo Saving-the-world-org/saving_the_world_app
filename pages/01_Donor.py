@@ -31,7 +31,7 @@ st.title("Donor", anchor=None)
 #st.subheader("Project 1 by Phoebe Gunter")
 #st.caption("This Bot allows professors of UC Berkeley courses to see which students are falling behind and not actively participating in class", unsafe_allow_html=False)
 
-org_names = org_df['Organization'].drop_duplicates()
+org_names = org_df.index.drop_duplicates()
 selected_org_by_donar = st.selectbox('Select Organization to Donate to:', org_names)
 
 st.info("You selected " + selected_org_by_donar + " to donate to.")

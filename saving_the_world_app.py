@@ -14,7 +14,8 @@ from pathlib import Path
 #Function to get the cities data 
 def get_cities():
     url = 'https://raw.githubusercontent.com/Saving-the-world-org/saving_the_world_app/main/Data/Cities%20-%20Cities.csv'
-    cities_df = pd.read_csv(url).rename(columns={"Unnamed: 0":"Instance"})
+    cities_df = pd.read_csv(url, index_col=0)
+    
     #data = Path("Data/Cities - Cities.csv")
     #cities_df = pd.read_csv(data, delimiter=",").rename(columns={"Unnamed: 0":"Instance"})
     return cities_df
