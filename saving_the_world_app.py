@@ -45,7 +45,7 @@ def get_city_for_org(org_name):
 def get_phone_for_org(org_name): 
     org_df = get_orgs()
     phone = org_df.loc[org_name, 'Phone number']
-    if phone is int: 
+    if isinstance(phone, int):
         phone = phone 
     else: 
         phone = phone[0]
