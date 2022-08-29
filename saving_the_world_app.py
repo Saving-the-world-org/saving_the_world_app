@@ -13,8 +13,10 @@ from pathlib import Path
 
 #Function to get the cities data 
 def get_cities():
-    data = Path("/Users/phoebegunter/Documents/FinTech-Workspace/project3/Data/Cities - Cities.csv")
-    cities_df = pd.read_csv(data, delimiter=",").rename(columns={"Unnamed: 0":"Instance"})
+    url = 'https://github.com/Saving-the-world-org/saving_the_world_app/blob/a1d8e00dcd1ac6aeb50d8dc14601847e382abe5f/Data/Cities%20-%20Cities.csv'
+    cities_df = pd.read_csv(url, index_col=0)
+    #data = Path("Data/Cities - Cities.csv")
+    #cities_df = pd.read_csv(data, delimiter=",").rename(columns={"Unnamed: 0":"Instance"})
     return cities_df
 
 #Function to return the donor_df
