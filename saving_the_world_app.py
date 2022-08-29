@@ -51,13 +51,16 @@ def get_phone_for_org(org_name):
         phone = phone
     else:
         phone = phone[0]
-    #if int(phone) == phone:
-        #st.write(type(phone))
-    #else: 
+    phone = str(phone)
     return phone
 
 def get_cred_for_org(org_name): 
     org_df = get_orgs()
     cred = org_df.loc[org_name, 'Credibility rating(1-5)']
+    if isinstance(cred, np.integer):
+        cred = cred
+    else:
+        cred = cred[0]
+    cred = str(cred)
     return cred
 
