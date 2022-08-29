@@ -49,6 +49,6 @@ def get_phone_for_org(org_name):
 
 def get_cred_for_org(org_name): 
     org_df = get_orgs()
-    cred = org_df.loc[org_name, 'Cred']
+    cred = org_df.loc[org_name, 'Credibility rating(1-5)']
     return cred
 
