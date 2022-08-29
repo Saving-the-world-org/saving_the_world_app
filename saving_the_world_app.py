@@ -37,6 +37,7 @@ def get_orgs():
     return org_df
 
 
-# def get_city_for_org(org_name, org_df): 
-#     city_name = org_df.loc[org_name, 'City']
-#     return city_name
+def get_city_for_org(org_name): 
+    org_df = get_orgs()
+    city_name = org_df.loc[org_name, 'City']
+    return city_name
