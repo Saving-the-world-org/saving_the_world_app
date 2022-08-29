@@ -40,7 +40,7 @@ for i in org_df.index.drop_duplicates():
 
     with col2: 
         i = i.replace(" ", "")
-        url = "https://github.com/Saving-the-world-org/saving_the_world_app/blob/main/images/" + i + ".png"
+        url = "https://github.com/Saving-the-world-org/saving_the_world_app/blob/edcd26a335fe3c6e99f17cd194a5491f913be26d/images/" + i + ".png"
         st.write(url)
         st.image(url)
     
