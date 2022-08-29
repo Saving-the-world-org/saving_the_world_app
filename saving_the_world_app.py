@@ -15,7 +15,7 @@ from pathlib import Path
 def get_cities():
     url = 'https://raw.githubusercontent.com/Saving-the-world-org/saving_the_world_app/main/Data/Cities%20-%20Cities.csv'
     cities_df = pd.read_csv(url, index_col=0)
-    
+
     #data = Path("Data/Cities - Cities.csv")
     #cities_df = pd.read_csv(data, delimiter=",").rename(columns={"Unnamed: 0":"Instance"})
     return cities_df
@@ -37,3 +37,6 @@ def get_orgs():
     return org_df
 
 
+def get_city_for_org(org_name, org_df): 
+    city_name = org_df.loc[org_name, 'City']
+    return city_name
