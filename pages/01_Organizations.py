@@ -23,8 +23,16 @@ st.title("Explore Organizations")
 
 st.write("Available Organizations to Donate to")
 
+#Action Against Hunger
 st.subheader("Action Against Hunger")
 action_against_hunger_city = get_city_for_org('Action against Hunger')
+
+for i in org_df.index:
+    st.write(i)
+
+
+# aah_phone = 
+# aah_cred = 
 st.write("City: " + action_against_hunger_city)
 st.write("Phone Number: ")
 st.write("Credibility Rating (out of 5): ")

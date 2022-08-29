@@ -41,3 +41,14 @@ def get_city_for_org(org_name):
     org_df = get_orgs()
     city_name = org_df.loc[org_name, 'City']
     return city_name
+
+def get_phone_for_org(org_name): 
+    org_df = get_orgs()
+    phone = org_df.loc[org_name, 'Phone number']
+    return phone
+
+def get_cred_for_org(org_name): 
+    org_df = get_orgs()
+    cred = org_df.loc[org_name, 'Cred']
+    return cred
+
