@@ -64,3 +64,6 @@ def get_cred_for_org(org_name):
     cred = str(cred)
     return cred
 
+def get_quantity_to_donate(category):
+    quantity = get_donors[category, 'quantity']
+    return quantity
