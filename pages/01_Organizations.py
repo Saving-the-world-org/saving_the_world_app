@@ -12,7 +12,7 @@ import pickle
 from pickle import load
 from math import log, floor
 from pathlib import Path
-from saving_the_world_app import get_cities,get_donors,get_orgs, get_city_for_org
+from saving_the_world_app import get_cities,get_donors,get_orgs, get_city_for_org, get_phone_for_org, get_cred_for_org
 
 #setting up dataframes from functions 
 cities_df = get_cities()
@@ -23,18 +23,16 @@ st.title("Explore Organizations")
 
 st.write("Available Organizations to Donate to")
 
-#Action Against Hunger
-st.subheader("Action Against Hunger")
-action_against_hunger_city = get_city_for_org('Action against Hunger')
+
 
 for i in org_df.index.drop_duplicates():
-    st.write(i)
+    city = get_city_for_org(i)
+    phone = get_phone_for_org(i)
+    cred = get_cred_for_org(i)
+    st.subheader("City: " + city)
+    st.write("Phone Number: "+ phone)
+    st.write("Credibility Rating (out of 5): " + cred)
 
 
-# aah_phone = 
-# aah_cred = 
-st.write("City: " + action_against_hunger_city)
-st.write("Phone Number: ")
-st.write("Credibility Rating (out of 5): ")
 
 #org_names = org_df.index.drop_duplicates()
