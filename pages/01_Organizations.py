@@ -27,7 +27,7 @@ st.write("Available Organizations to Donate to")
 st.subheader("Action Against Hunger")
 action_against_hunger_city = get_city_for_org('Action against Hunger')
 
-for i in org_df.index:
+for i in org_df.index.drop_duplicates():
     st.write(i)
 
 
