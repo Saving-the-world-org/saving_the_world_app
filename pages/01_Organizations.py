@@ -25,22 +25,22 @@ st.write("Available Organizations to Donate to")
 
 
 for i in org_df.index.drop_duplicates():
-    st.subheader(i)
-    city = get_city_for_org(i)
+    col1, col2 = st.columns(2)
+    with col1:
+        city = get_city_for_org(i)
+        st.subheader(i)
+        if isinstance(city, str):
+            st.write("City: " + city)
+        else:
+            st.dataframe(city)
+        phone = get_phone_for_org(i)
+        cred = get_cred_for_org(i)
+        st.write("Phone Number: " + phone)
+        st.write("Credibility Rating (out of 5): " + cred )
 
-    if isinstance(city, str):
-        st.write("City: " + city)
-    else:
-        st.dataframe(city)
-    phone = get_phone_for_org(i)
-    cred = get_cred_for_org(i)
+    with col2: 
+        url = "https://github.com/Saving-the-world-org/saving_the_world_app/blob/main/images/" + i + ".png"
+        st.image(url)
     
-    st.write("Phone Number: " + phone)
-    #st.write(phone)
-    st.write("Credibility Rating (out of 5): " + cred )
-    #st.write(cred)
-    # if type(phone) is  : 
-    #     st.write("series")
 
 
-#org_names = org_df.index.drop_duplicates()
