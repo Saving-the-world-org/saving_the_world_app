@@ -31,8 +31,7 @@ for i in org_df.index.drop_duplicates():
     if isinstance(city, str):
         st.write("City: " + city)
     else:
-        city = city.iloc[:, 0]
-        st.write(city)
+        st.dataframe(city)
     phone = get_phone_for_org(i)
     cred = get_cred_for_org(i)
     
