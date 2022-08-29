@@ -23,4 +23,4 @@ st.subheader("This app enabled you to safetly track donating and receiving aid p
 st.caption("Project 3 by Phoebe Gunter, Harry Oestreicher, Abhishek Banerjee, Gabriel Paganin, Gerald Cortright, Javier", unsafe_allow_html=False)
 
 url = "https://github.com/Saving-the-world-org/saving_the_world_app/blob/50e3533a923e74d9cc8c5cfdb2483e9efac7d806/images/ActionagainstHunger.png"
-st.image(url)
+st.image(url, caption="Photo from Action Against Hunger")
