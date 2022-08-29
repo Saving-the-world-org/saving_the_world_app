@@ -12,9 +12,9 @@ from math import log, floor
 from pathlib import Path
 from saving_the_world_app import get_cities,get_donors,get_orgs
 
-
-if "shared" not in st.session_state:
-   st.session_state["shared"] = True
+#session state was throwing errors 
+# if "shared" not in st.session_state:
+#    st.session_state["shared"] = True
 
 
 #Header information 
