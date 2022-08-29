@@ -10,6 +10,7 @@ import pickle
 from pickle import load
 from math import log, floor
 from pathlib import Path
+import numpy as np
 
 #Function to get the cities data 
 def get_cities():
@@ -46,11 +47,13 @@ def get_phone_for_org(org_name):
     org_df = get_orgs()
     phone = org_df.loc[org_name, 'Phone number']
     #st.write(type(phone))
-    if int(phone) == phone:
+    if isinstance(phone, np.integer):
         phone = phone
-        #st.write(type(phone))
-    else: 
+    else:
         phone = phone[0]
+    #if int(phone) == phone:
+        #st.write(type(phone))
+    #else: 
     return phone
 
 def get_cred_for_org(org_name): 
