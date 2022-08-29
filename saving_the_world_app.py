@@ -45,10 +45,10 @@ def get_city_for_org(org_name):
 def get_phone_for_org(org_name): 
     org_df = get_orgs()
     phone = org_df.loc[org_name, 'Phone number']
-    st.write(type(phone))
-    if isinstance(phone, int):
+    #st.write(type(phone))
+    if int(phone) == phone:
         phone = phone
-        st.write(type(phone))
+        #st.write(type(phone))
     else: 
         phone = phone[0]
     return phone
