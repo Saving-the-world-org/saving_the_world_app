@@ -31,9 +31,10 @@ for i in org_df.index.drop_duplicates():
     cred = get_cred_for_org(i)
     st.write("City: " + city)
     st.write("Phone Number: ")
-    st.write(phone.type)
+    st.write(type(phone))
     st.write(phone)
     st.write("Credibility Rating (out of 5): " )
+    st.write(type(cred))
     st.write(cred)
 
 
