@@ -21,14 +21,18 @@ def get_cities():
 
 #Function to return the donor_df
 def get_donors():
-    data = Path("/Users/phoebegunter/Documents/FinTech-Workspace/project3/Data/Donations - Donations.csv")
-    donor_df = pd.read_csv(data, delimiter=",").rename(columns={"Unnamed: 0":"Instance"})
+    url = 'https://github.com/Saving-the-world-org/saving_the_world_app/blob/3480cc3cfcfb14f904130666e1d8989ad148d2e7/Data/Donations%20-%20Donations.csv'
+    donor_df = pd.read_csv(url, index_col=0)
+    #data = Path("/Users/phoebegunter/Documents/FinTech-Workspace/project3/Data/Donations - Donations.csv")
+    #donor_df = pd.read_csv(data, delimiter=",").rename(columns={"Unnamed: 0":"Instance"})
     return donor_df
 
 #Function to return the org_df
 def get_orgs():
-    data = Path("/Users/phoebegunter/Documents/FinTech-Workspace/project3/Data/Organizations - Organizations.csv")
-    org_df = pd.read_csv(data, delimiter=",").rename(columns={"Unnamed: 0":"Instance"})
+    url = 'https://github.com/Saving-the-world-org/saving_the_world_app/blob/3480cc3cfcfb14f904130666e1d8989ad148d2e7/Data/Organizations%20-%20Organizations.csv'
+    org_df = pd.read_csv(url, index_col=0)
+    # data = Path("/Users/phoebegunter/Documents/FinTech-Workspace/project3/Data/Organizations - Organizations.csv")
+    # org_df = pd.read_csv(data, delimiter=",").rename(columns={"Unnamed: 0":"Instance"})
     return org_df
 
 
