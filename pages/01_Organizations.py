@@ -34,8 +34,8 @@ for i in org_df.index.drop_duplicates():
     st.write(phone)
     st.write("Credibility Rating (out of 5): " )
     st.write(cred)
-    if type(phone) is  : 
-        st.write("series")
+    # if type(phone) is  : 
+    #     st.write("series")
 
 
 #org_names = org_df.index.drop_duplicates()
