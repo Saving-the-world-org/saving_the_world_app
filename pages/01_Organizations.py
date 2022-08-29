@@ -27,6 +27,7 @@ st.write("Available Organizations to Donate to")
 for i in org_df.index.drop_duplicates():
     st.subheader(i)
     city = get_city_for_org(i)
+    st.write(type(city))
     phone = get_phone_for_org(i)
     cred = get_cred_for_org(i)
     st.write("City: " + city)
