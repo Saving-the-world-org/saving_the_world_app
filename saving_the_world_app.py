@@ -45,10 +45,12 @@ def get_city_for_org(org_name):
 def get_phone_for_org(org_name): 
     org_df = get_orgs()
     phone = org_df.loc[org_name, 'Phone number']
-    return phone[0]
+    phone = phone[0]
+    return phone
 
 def get_cred_for_org(org_name): 
     org_df = get_orgs().drop_duplicates
     cred = org_df.loc[org_name, 'Credibility rating(1-5)']
-    return cred[0]
+    cred = cred[0]
+    return cred
 
