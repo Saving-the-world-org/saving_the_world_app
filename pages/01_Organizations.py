@@ -24,7 +24,6 @@ st.title("Explore Organizations")
 st.write("Available Organizations to Donate to")
 
 
-
 for i in org_df.index.drop_duplicates():
     st.subheader(i)
     city = get_city_for_org(i)
@@ -33,7 +32,6 @@ for i in org_df.index.drop_duplicates():
     st.write("City: " + city)
     st.write("Phone Number: " + str(phone))
     st.write("Credibility Rating (out of 5): " + str(cred))
-
 
 
 #org_names = org_df.index.drop_duplicates()
