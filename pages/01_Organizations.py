@@ -43,6 +43,4 @@ for i in org_df.index.drop_duplicates():
         # url = "https://github.com/Saving-the-world-org/saving_the_world_app/blob/edcd26a335fe3c6e99f17cd194a5491f913be26d/images/" + short_name + ".png"
         # st.write(url)
         # st.image(url, caption = i)
-    
-
-
+        st.write("place holder for photos")
