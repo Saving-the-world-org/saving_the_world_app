@@ -14,8 +14,9 @@ from pathlib import Path
 from saving_the_world_app import get_cities, get_donors, get_orgs 
 
 
+# Was throwing errors 
 # page2.py
-st.write(st.session_state["shared"])
+#st.write(st.session_state["shared"])
 
 #setting up dataframes from functions 
 cities_df = get_cities()
