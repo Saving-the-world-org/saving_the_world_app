@@ -24,4 +24,4 @@ st.caption("Project 3 by Phoebe Gunter, Harry Oestreicher, Abhishek Banerjee, Ga
 
 url = "https://github.com/Saving-the-world-org/saving_the_world_app/blob/50e3533a923e74d9cc8c5cfdb2483e9efac7d806/images/ActionagainstHunger.png"
 st.image(url, caption="Photo from Action Against Hunger")
-https://github.com/Saving-the-world-org/saving_the_world_app/blob/main/images/Hunger1.png
+# https://github.com/Saving-the-world-org/saving_the_world_app/blob/main/images/Hunger1.png

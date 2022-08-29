@@ -43,7 +43,7 @@ selected_org_by_donar = st.selectbox('Select Organization to Donate to:', org_na
 st.info("You selected " + selected_org_by_donar + " to donate to.")
 
 
-items_to_donate = donors_df.loc["Items donated"].drop_duplicates 
+items_to_donate = donors_df["Items donated"].drop_duplicates 
 #quantity_to_donate = get_donors.loc["qantity"]
 selected_item_to_donate = st.selectbox("Select Item to Donate ", items_to_donate)
 st.info("You would like to donate"  + selected_item_to_donate + " to donate to.")
