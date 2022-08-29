@@ -26,7 +26,7 @@ st.title("Explore Organizations")
 st.write("Available Organizations to Donate to")
 
 st.subtitle("Action Against Hunger")
-action_against_hunger_city = get_city_for_org("Action against Huner", org_df)
-st.write("City: " + action_against_hunger_city)
+#  action_against_hunger_city = get_city_for_org("Action against Huner", org_df)
+# st.write("City: " + action_against_hunger_city)
 
 org_names = org_df.index.drop_duplicates()
